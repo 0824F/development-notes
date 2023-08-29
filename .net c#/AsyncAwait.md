@@ -33,7 +33,7 @@ void DoIndependentWork()
 
 2. 创建 HttpClient 实例调用`GetStringAsync`方法
 
-3. `GetStringAsync`要等待网站下载，避免阻止资源,`GetStringAsync`会将控制权让出给其调用方`GetUrlContentLengthAsync`，会返回未完成的 Task<string>
+3. `GetStringAsync`要等待网站下载，避免阻止资源,`GetStringAsync`会将控制权让出给其调用方`GetUrlContentLengthAsync`，会返回未完成的 `Task<string>`
 
 4. 由于`GetStringAsync`未完成,`GetUrlContentLengthAsync`会执行不依赖`GetStringAsync`结果的其他工作
 
